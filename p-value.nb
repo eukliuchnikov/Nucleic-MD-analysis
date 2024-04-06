@@ -1,0 +1,199 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7281,        191]
+NotebookOptionsPosition[      6420,        166]
+NotebookOutlinePosition[      6852,        183]
+CellTagsIndexPosition[      6809,        180]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Clear", "[", 
+  RowBox[{"data1", ",", " ", "data2", ",", "r", ",", "t"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "[", "\"\<HypothesisTesting`\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"data1", "=", 
+   RowBox[{
+    RowBox[{
+    "Import", "[", 
+     "\"\</home/klyuchnikov/Desktop/PROJECTS/ALnylam/3'-endo/AGT.dat\>\"", 
+     "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "6"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"data2", "=", 
+   RowBox[{
+    RowBox[{
+    "Import", "[", 
+     "\"\</home/klyuchnikov/Desktop/PROJECTS/ALnylam/3'-endo/AGT.dat\>\"", 
+     "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "12"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "=", 
+   RowBox[{"Correlation", "[", 
+    RowBox[{"data1", ",", "data2"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Pearson corr coef = \>\"", ",", 
+   RowBox[{"N", "[", "r", "]"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t", "=", 
+   RowBox[{"r", "*", 
+    RowBox[{
+     RowBox[{"Sqrt", "[", 
+      RowBox[{
+       RowBox[{"Length", "[", "data1", "]"}], "-", "2"}], "]"}], "/", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       RowBox[{"r", "^", "2"}]}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"StudentTPValue", "[", 
+   RowBox[{"t", ",", " ", 
+    RowBox[{
+     RowBox[{"Length", "[", "data1", "]"}], "-", "2"}]}], "]"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.847914178167054*^9, 3.8479142211884413`*^9}, {
+  3.847914742108144*^9, 3.847914746829561*^9}, {3.8479996093973427`*^9, 
+  3.84799961157097*^9}, {3.849271592172841*^9, 3.849271594680394*^9}, {
+  3.849271765092663*^9, 3.8492718239034023`*^9}, {3.849271857794626*^9, 
+  3.849271885817013*^9}, {3.8492719202636223`*^9, 3.849271951494076*^9}, {
+  3.849272193341878*^9, 3.8492722180268707`*^9}, {3.849272248774536*^9, 
+  3.849272249123396*^9}, {3.849272290710704*^9, 3.849272324148364*^9}, {
+  3.849272355937092*^9, 3.849272460856145*^9}, {3.873823339503704*^9, 
+  3.873823380142687*^9}, {3.87382353832295*^9, 3.8738235998395767`*^9}, {
+  3.873823682801942*^9, 3.873823733348565*^9}},
+ CellLabel->"In[73]:=",ExpressionUUID->"67361ca4-a67f-42c1-910a-223ce09c5bfa"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Pearson corr coef = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.6890829043846329`"}]}],
+  SequenceForm["Pearson corr coef = ", -0.6890829043846329],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.847820262500367*^9, 3.847914222247986*^9, 3.847914749436398*^9, 
+   3.847999613775797*^9, {3.849271777105729*^9, 3.8492718239900703`*^9}, {
+   3.849271870052033*^9, 3.849271885902397*^9}, {3.849271920463875*^9, 
+   3.8492719519347057`*^9}, 3.849272218583067*^9, 3.849272249644352*^9, 
+   3.849272290870071*^9, {3.849272330321864*^9, 3.849272462404405*^9}, 
+   3.8738233826873837`*^9, {3.8738234194167757`*^9, 3.873823419668831*^9}, 
+   3.873823540134823*^9, 3.873823602451449*^9, {3.873823685400732*^9, 
+   3.873823734282586*^9}},
+ CellLabel->
+  "During evaluation of \
+In[73]:=",ExpressionUUID->"3dedf24e-5b97-4599-b0a1-a8ebfc7b1bcf"],
+
+Cell[BoxData[
+ RowBox[{"OneSidedPValue", "\[Rule]", "0.029354091553801726`"}]], "Print",
+ CellChangeTimes->{
+  3.847820262500367*^9, 3.847914222247986*^9, 3.847914749436398*^9, 
+   3.847999613775797*^9, {3.849271777105729*^9, 3.8492718239900703`*^9}, {
+   3.849271870052033*^9, 3.849271885902397*^9}, {3.849271920463875*^9, 
+   3.8492719519347057`*^9}, 3.849272218583067*^9, 3.849272249644352*^9, 
+   3.849272290870071*^9, {3.849272330321864*^9, 3.849272462404405*^9}, 
+   3.8738233826873837`*^9, {3.8738234194167757`*^9, 3.873823419668831*^9}, 
+   3.873823540134823*^9, 3.873823602451449*^9, {3.873823685400732*^9, 
+   3.873823734284957*^9}},
+ CellLabel->
+  "During evaluation of \
+In[73]:=",ExpressionUUID->"204a335a-7b7f-49ec-9167-dd2c7d7f7616"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", 
+  RowBox[{"data1", ",", " ", "data2", ",", "r", ",", "t", ",", "n"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "=", " ", 
+   RowBox[{"-", "0.84"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", "=", "11"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t", "=", 
+   RowBox[{"r", "*", 
+    RowBox[{
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"n", "-", "2"}], "]"}], "/", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       RowBox[{"r", "^", "2"}]}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"StudentTPValue", "[", 
+   RowBox[{"t", ",", " ", 
+    RowBox[{"n", "-", "2"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.848005646294064*^9, 3.848005715383769*^9}, {
+  3.8480059444067717`*^9, 3.848005960207323*^9}, {3.848006089898005*^9, 
+  3.8480061228236237`*^9}, {3.8480062086517897`*^9, 3.8480062093766937`*^9}, {
+  3.848007300619714*^9, 3.848007300708786*^9}, {3.848007356040669*^9, 
+  3.848007356701947*^9}, {3.8480074042504807`*^9, 3.848007404287483*^9}, {
+  3.848007459786923*^9, 3.848007461160924*^9}, {3.8480075275495768`*^9, 
+  3.8480075382102413`*^9}},
+ CellLabel->"In[89]:=",ExpressionUUID->"1b67ffd3-5009-40bf-b28c-a35aa29be1a3"],
+
+Cell[BoxData[
+ RowBox[{"OneSidedPValue", "\[Rule]", "0.0006058244670404976`"}]], "Print",
+ CellChangeTimes->{
+  3.84800571873228*^9, {3.848005945148904*^9, 3.848005960813829*^9}, {
+   3.848006090291731*^9, 3.848006093041067*^9}, 3.848006123146221*^9, 
+   3.848006209690024*^9, 3.8480073015447283`*^9, 3.848007357015402*^9, 
+   3.8480074050166893`*^9, 3.848007461591403*^9, {3.848007527835956*^9, 
+   3.8480075384840603`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[89]:=",ExpressionUUID->"af95b074-5ee6-4802-b429-6e8e44155bcd"]
+}, Open  ]]
+},
+WindowSize->{959.25, 1060.5},
+WindowMargins->{{Automatic, -959.25}, {0.75, Automatic}},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"12.3 for Linux x86 (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1d8fbd40-afde-42c1-bb01-882ab259ac9b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2316, 58, 206, "Input",ExpressionUUID->"67361ca4-a67f-42c1-910a-223ce09c5bfa"],
+Cell[CellGroupData[{
+Cell[2921, 84, 891, 17, 28, "Print",ExpressionUUID->"3dedf24e-5b97-4599-b0a1-a8ebfc7b1bcf"],
+Cell[3815, 103, 748, 13, 28, "Print",ExpressionUUID->"204a335a-7b7f-49ec-9167-dd2c7d7f7616"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4612, 122, 1259, 29, 133, "Input",ExpressionUUID->"1b67ffd3-5009-40bf-b28c-a35aa29be1a3"],
+Cell[5874, 153, 530, 10, 28, "Print",ExpressionUUID->"af95b074-5ee6-4802-b429-6e8e44155bcd"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,12 @@
+Input file for running PB and GB
+&general
+   use_sander=1,
+   netcdf=1,
+   endframe=2, verbose=2, interval=1,
+ # entropy=1,
+/
+&nmode
+   nmode_igb=1
+   nmode_istrng=0.1
+   maxcyc=10000
+   nminterval=1

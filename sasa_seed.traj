@@ -1,0 +1,4 @@
+parm AandB.prmtop
+trajin nucleic.dcd
+surf seed_g :1-26 out sasa_PMO.dat
+

@@ -1,0 +1,11 @@
+Input file for running PB and GB
+&general
+   use_sander=1,
+   netcdf=1,
+   endframe=2, verbose=2, interval=1,
+#  entropy=1,
+/
+&gb
+  igb=5, saltcon=0.0
+/
+
